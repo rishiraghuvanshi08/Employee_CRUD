@@ -35,7 +35,7 @@ public class LoginChecker extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("login.jsp");
 	}
 
 	/**
@@ -54,19 +54,21 @@ public class LoginChecker extends HttpServlet {
 		{
 			if(emp.isAdmin() == true) {
 				HttpSession session = request.getSession(true);
-				session.setAttribute("username", username);
+				session.setAttribute("employee", emp);
 				
-				request.setAttribute("emp", emp);
-				rd = getServletContext().getRequestDispatcher("/adminHome.jsp");
-				rd.include(request, response);
+//				request.setAttribute("emp", emp);
+//				rd = getServletContext().getRequestDispatcher("/adminHome.jsp");
+//				rd.include(request, response);
+				response.sendRedirect("adminHome.jsp");
 			}
 			else {
 				HttpSession session = request.getSession(true);
-				session.setAttribute("username", username);
+				session.setAttribute("employee", emp);
 				
-				request.setAttribute("emp", emp);
-				rd = getServletContext().getRequestDispatcher("/userHome.jsp");
-				rd.include(request, response);
+//				request.setAttribute("emp", emp);
+//				rd = getServletContext().getRequestDispatcher("/userHome.jsp");
+//				rd.include(request, response);
+				response.sendRedirect("userHome.jsp");
 			}
 		}
 		else

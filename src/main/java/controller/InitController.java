@@ -7,20 +7,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import entity.Employee;
+import service.EmployeeService;
+
 /**
  * Servlet implementation class InitController
  */
 @WebServlet("/InitController")
 public class InitController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	EmployeeService es = new EmployeeService();
 
     /**
      * Default constructor. 
      */
     public InitController() {
         // TODO Auto-generated constructor stub
-    	
+    	es.loadData();
+    	System.out.println("Data Loading");
     }
     
 

@@ -51,9 +51,7 @@ public class UpdateEmployee extends HttpServlet {
 		boolean updated = es.updateEmployeeDetails(id, username, firstName, lastName, isAdmin, salary);
 		
 		if(updated) {
-			request.setAttribute("updationSuccess", "success");
-			rd = getServletContext().getRequestDispatcher("/adminHome.jsp");
-			rd.include(request, response);
+			response.sendRedirect("adminHome.jsp");
 		}
 		else {
 			request.setAttribute("updationFailed", "failed");

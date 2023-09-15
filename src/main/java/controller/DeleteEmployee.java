@@ -46,9 +46,7 @@ public class DeleteEmployee extends HttpServlet {
 		boolean idDeleted = es.deleteEmployee(id);
 		
 		if(idDeleted) {
-			request.setAttribute("deleteSuccess", "success");
-			rd = getServletContext().getRequestDispatcher("/adminHome.jsp");
-			rd.include(request, response);
+			response.sendRedirect("adminHome.jsp");
 		}
 		else {
 			request.setAttribute("deleteFailed", "success");

@@ -51,9 +51,7 @@ public class UpdateMyDetails extends HttpServlet {
 		boolean updated = es.updateMyDetails(id, username, firstName, lastName, salary, password);
 	
 		if(updated) {
-			request.setAttribute("updationSuccess", "success");
-			rd = getServletContext().getRequestDispatcher("/userHome.jsp");
-			rd.include(request, response);
+			response.sendRedirect("userHome.jsp");
 		}
 		else {
 			request.setAttribute("updationFailed", "failed");

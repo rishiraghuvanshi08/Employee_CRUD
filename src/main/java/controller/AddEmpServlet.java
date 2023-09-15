@@ -51,9 +51,7 @@ public class AddEmpServlet extends HttpServlet {
 		boolean isAdded = es.addEmployee(username, firstName, lastName, isAdmin, salary, password);
 		
 		if(isAdded == true) {
-			request.setAttribute("addSuccess", "success");
-			rd = getServletContext().getRequestDispatcher("/addEmp.jsp");
-			rd.include(request, response);
+			response.sendRedirect("addEmp.jsp");
 		} 
 		else {
 			request.setAttribute("addFailed", "failed");

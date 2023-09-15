@@ -104,6 +104,20 @@
 	</div>
 	<!-- Navbar End -->
 
+	<%
+	String emptyEmp = (String) request.getAttribute("emptyEmp");
+	if (emptyEmp != null) {
+	%>
+	<div class="alert alert-danger alert-dismissible show wow fadeIn mb-0"
+		data-wow-delay="0.1s" role="alert">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Failed!</strong>
+		You have to login again.
+		<button type="button" class="btn-close" data-bs-dismiss="alert"
+			aria-label="Close"></button>
+	</div>
+	<%
+	}
+	%>
 
 	<!-- Login Start -->
 	<div class="container-xxl py-5">
@@ -181,11 +195,8 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Quick Links</h4>
-					<a class="btn btn-link" href="">About Us</a> <a
-						class="btn btn-link" href="">Contact Us</a> <a
-						class="btn btn-link" href="">Our Services</a> <a
-						class="btn btn-link" href="">Terms & Condition</a> <a
-						class="btn btn-link" href="">Support</a>
+					<a class="btn btn-link" href="home.jsp">Home</a> <a
+						class="btn btn-link" href="login.jsp">Login</a> 
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Business Hours</h4>
@@ -196,16 +207,7 @@
 					<p class="mb-1">Sunday</p>
 					<h6 class="text-light">Closed</h6>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h4 class="text-white mb-4">Newsletter</h4>
-					<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-					<div class="position-relative w-100">
-						<input class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-							type="text" placeholder="Your email">
-						<button type="button"
-							class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

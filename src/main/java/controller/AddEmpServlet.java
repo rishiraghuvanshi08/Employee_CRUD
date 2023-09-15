@@ -44,11 +44,11 @@ public class AddEmpServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
-		boolean idAdmin = Boolean.parseBoolean(request.getParameter("inAdmin"));
+		boolean isAdmin = Boolean.parseBoolean(request.getParameter("isAdmin"));
 		float salary = Float.parseFloat(request.getParameter("salary"));
 		String password = request.getParameter("password");
 		
-		boolean isAdded = es.addEmployee(username, firstName, lastName, idAdmin, salary, password);
+		boolean isAdded = es.addEmployee(username, firstName, lastName, isAdmin, salary, password);
 		
 		if(isAdded == true) {
 			request.setAttribute("addSuccess", "success");

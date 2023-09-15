@@ -44,6 +44,10 @@
 </head>
 <body>
 	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	
 	Employee emp = (Employee) session.getAttribute("employee");
 	if (emp == null) {
 		response.sendRedirect("login.jsp");
@@ -186,7 +190,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-floating">
-									<input type="number" name="salary" class="form-control"
+									<input type="text" pattern="[0-9]{6}" onkeypress="return onlyNumberKey(event)"  maxlength="6" name="salary" class="form-control"
 										id="salary" placeholder="Salary" required> <label
 										for="salary">Salary</label>
 								</div>
@@ -244,11 +248,8 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Quick Links</h4>
-					<a class="btn btn-link" href="">About Us</a> <a
-						class="btn btn-link" href="">Contact Us</a> <a
-						class="btn btn-link" href="">Our Services</a> <a
-						class="btn btn-link" href="">Terms & Condition</a> <a
-						class="btn btn-link" href="">Support</a>
+					<a class="btn btn-link" href="adminHome.jsp">Admin Home</a> <a
+						class="btn btn-link" href="addEmp.jsp">Add Employee</a> 
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Business Hours</h4>
@@ -259,16 +260,7 @@
 					<p class="mb-1">Sunday</p>
 					<h6 class="text-light">Closed</h6>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h4 class="text-white mb-4">Newsletter</h4>
-					<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-					<div class="position-relative w-100">
-						<input class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-							type="text" placeholder="Your email">
-						<button type="button"
-							class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -280,14 +272,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-					&copy; <a class="fw-medium text-light" href="#">Your Site Name</a>,
+					&copy; <a class="fw-medium text-light" href="#">Employee Management</a>,
 					All Right Reserved.
-				</div>
-				<div class="col-md-6 text-center text-md-end">
-					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-					Designed By <a class="fw-medium text-light"
-						href="https://htmlcodex.com">HTML Codex</a> Distributed By <a
-						class="fw-medium text-light" href="https://themewagon.com">ThemeWagon</a>
 				</div>
 			</div>
 		</div>
@@ -314,6 +300,13 @@
 
 	<!-- Template Javascript -->
 	<script src="js/main.js"></script>
-
+	<script>
+            function onlyNumberKey(evt) {
+                var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                    return false;
+                return true;
+            }
+    </script>
 </body>
 </html>

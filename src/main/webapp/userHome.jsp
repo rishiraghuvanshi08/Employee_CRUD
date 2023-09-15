@@ -54,9 +54,15 @@
 
 <body>
 	<%
-	Employee emp = (Employee) session.getAttribute("employee");
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	
+	Employee emp = (Employee)session.getAttribute("employee");
 	if (emp == null) {
-		response.sendRedirect("login.jsp");
+		request.setAttribute("emptyEmp", "failed");
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
+		rd.include(request, response);
 	}
 	%>
 
@@ -149,14 +155,13 @@
 	<%
 	}
 	%>
-
+	
 	<!-- Table Start -->
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="text-center mx-auto mb-3 wow fadeInUp"
 				data-wow-delay="0.1s" style="max-width: 600px;">
 				<h3 class="section-title bg-white text-center text-primary px-3">Welcome <%=emp.getFirstName()%></h3>
-				<!-- <h1 class="display-6 mb-4">Enter Username and Password</h1> -->
 			</div>
 			<div class="text-center mx-auto mb-3 wow fadeInUp"
 				data-wow-delay="0.1s" style="max-width: 600px;">
@@ -166,7 +171,6 @@
 			</div>
 			<div class="row g-0 justify-content-center">
 				<div class="col-lg-10 wow fadeInUp" data-wow-delay="0.1s">
-					<!-- <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
 					<table class="table">
 						<thead>
 							<tr>
@@ -299,11 +303,7 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Quick Links</h4>
-					<a class="btn btn-link" href="">About Us</a> <a
-						class="btn btn-link" href="">Contact Us</a> <a
-						class="btn btn-link" href="">Our Services</a> <a
-						class="btn btn-link" href="">Terms & Condition</a> <a
-						class="btn btn-link" href="">Support</a>
+					<a class="btn btn-link" href="userHome.jsp">User Home</a>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Business Hours</h4>
@@ -314,16 +314,7 @@
 					<p class="mb-1">Sunday</p>
 					<h6 class="text-light">Closed</h6>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h4 class="text-white mb-4">Newsletter</h4>
-					<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-					<div class="position-relative w-100">
-						<input class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-							type="text" placeholder="Your email">
-						<button type="button"
-							class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -335,14 +326,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-					&copy; <a class="fw-medium text-light" href="#">Your Site Name</a>,
+					&copy; <a class="fw-medium text-light" href="#">Employee Management</a>,
 					All Right Reserved.
-				</div>
-				<div class="col-md-6 text-center text-md-end">
-					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-					Designed By <a class="fw-medium text-light"
-						href="https://htmlcodex.com">HTML Codex</a> Distributed By <a
-						class="fw-medium text-light" href="https://themewagon.com">ThemeWagon</a>
 				</div>
 			</div>
 		</div>

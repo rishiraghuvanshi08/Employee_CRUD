@@ -31,15 +31,11 @@ public class EmployeeService {
 			return null;
 		}
 	}
-	public boolean addEmployee(String username, String firstName, String lastName, boolean idAdmin, float salary, String password) {
+	public boolean addEmployee(String username, String firstName, String lastName, boolean isAdmin, float salary, String password) {
 		id = list.get(list.size()-1).getId() + 1;
-		Employee newEmp = new Employee(id, username, firstName, lastName, idAdmin, salary, password);
-		
-		if(newEmp != null) {
-			list.add(newEmp);
-			return true;
-		}
-		return false;
+		Employee newEmp = new Employee(id, username, firstName, lastName, isAdmin, salary, password);
+		list.add(newEmp);
+		return true;
 	}
 	public boolean deleteEmployee(int id) {
 		Optional<Employee> empToDelete = list.stream().filter(emp -> emp.getId() == id).findFirst();

@@ -111,17 +111,16 @@
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="w-100" src="img/carousel-1.jpg" alt="Image">
+					<img class="w-100" src="img/emp.png" alt="Image">
 					<div class="carousel-caption">
 						<div class="container">
 							<div class="row justify-content-start">
 								<div class="col-lg-7 text-start">
 									<p class="fs-4 text-white animated slideInRight">
-										Welcome to <strong>Employee Management System</strong>
+										<strong>Welcome to</strong>
 									</p>
-									<h1 class="display-1 text-white mb-4 animated slideInRight">You
-										can login to check the data</h1>
-									<a href=""
+									<h2 class="display-1 text-white mb-4 animated slideInRight">Employee Management System</h2>
+									<a href="login.jsp"
 										class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore
 										More</a>
 								</div>
@@ -129,36 +128,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="carousel-item">
-					<img class="w-100" src="img/carousel-2.jpg" alt="Image">
-					<div class="carousel-caption">
-						<div class="container">
-							<div class="row justify-content-end">
-								<div class="col-lg-7 text-end">
-									<p class="fs-4 text-white animated slideInLeft">
-										Welcome to <strong>GrowMark</strong>
-									</p>
-									<h1 class="display-1 text-white mb-5 animated slideInLeft">Ready
-										to Grow Your Business</h1>
-									<a href=""
-										class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore
-										More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 			</div>
-			<button class="carousel-control-prev" type="button"
-				data-bs-target="#header-carousel" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button"
-				data-bs-target="#header-carousel" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+			
 		</div>
 	</div>
 	<!-- Carousel End -->
@@ -172,133 +144,46 @@
 					<div class="feature-item border h-100 p-5">
 						<div class="btn-square bg-light rounded-circle mb-4"
 							style="width: 64px; height: 64px;">
-							<img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+							<img class="img-fluid" src="img/icon/c.jpg" alt="Icon">
 						</div>
-						<h5 class="mb-3">Award Winning</h5>
-						<p class="mb-0">Stet stet justo dolor sed duo. Ut clita sea
-							sit ipsum diam</p>
+						<h5 class="mb-3">Create Operation</h5>
+						<p class="mb-0">Inserting new data records into the database to add fresh information.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
 					<div class="feature-item border h-100 p-5">
 						<div class="btn-square bg-light rounded-circle mb-4"
 							style="width: 64px; height: 64px;">
-							<img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
+							<img class="img-fluid" src="img/icon/r.jpg" alt="Icon">
 						</div>
-						<h5 class="mb-3">Professional Staff</h5>
-						<p class="mb-0">Stet stet justo dolor sed duo. Ut clita sea
-							sit ipsum diam</p>
+						<h5 class="mb-3">Read Operation</h5>
+						<p class="mb-0">Fetching and retrieving existing data from the database for viewing or analysis.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
 					<div class="feature-item border h-100 p-5">
 						<div class="btn-square bg-light rounded-circle mb-4"
 							style="width: 64px; height: 64px;">
-							<img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+							<img class="img-fluid" src="img/icon/u.jpg" alt="Icon">
 						</div>
-						<h5 class="mb-3">Fair Prices</h5>
-						<p class="mb-0">Stet stet justo dolor sed duo. Ut clita sea
-							sit ipsum diam</p>
+						<h5 class="mb-3">Update Operation</h5>
+						<p class="mb-0">Modifying and altering existing data in the database to reflect changes or corrections.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
 					<div class="feature-item border h-100 p-5">
 						<div class="btn-square bg-light rounded-circle mb-4"
 							style="width: 64px; height: 64px;">
-							<img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
+							<img class="img-fluid" src="img/icon/d.jpg" alt="Icon">
 						</div>
-						<h5 class="mb-3">24/7 Support</h5>
-						<p class="mb-0">Stet stet justo dolor sed duo. Ut clita sea
-							sit ipsum diam</p>
+						<h5 class="mb-3">Delete Operation</h5>
+						<p class="mb-0">Removing data entries from the database to eliminate specific records or information.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Features End -->
-
-
-	<!-- Team Start -->
-	<div class="container-xxl py-5">
-		<div class="container">
-			<div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
-				style="max-width: 500px;">
-				<p class="fs-5 fw-medium text-primary">Our Team</p>
-				<h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
-			</div>
-			<div class="row g-4">
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-					<div class="team-item rounded overflow-hidden pb-4">
-						<img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
-						<h5>Alex Robin</h5>
-						<span class="text-primary">Founder & CEO</span>
-						<ul class="team-social">
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-twitter"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-instagram"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-linkedin-in"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-					<div class="team-item rounded overflow-hidden pb-4">
-						<img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
-						<h5>Adam Crew</h5>
-						<span class="text-primary">Co Founder</span>
-						<ul class="team-social">
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-twitter"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-instagram"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-linkedin-in"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-					<div class="team-item rounded overflow-hidden pb-4">
-						<img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
-						<h5>Boris Johnson</h5>
-						<span class="text-primary">Executive Manager</span>
-						<ul class="team-social">
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-twitter"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-instagram"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-linkedin-in"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-					<div class="team-item rounded overflow-hidden pb-4">
-						<img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
-						<h5>Robert Jordan</h5>
-						<span class="text-primary">Digital Marketer</span>
-						<ul class="team-social">
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-twitter"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-instagram"></i></a></li>
-							<li><a class="btn btn-square" href=""><i
-									class="fab fa-linkedin-in"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Team End -->
 
 
 	<!-- Footer Start -->
@@ -330,11 +215,8 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Quick Links</h4>
-					<a class="btn btn-link" href="">About Us</a> <a
-						class="btn btn-link" href="">Contact Us</a> <a
-						class="btn btn-link" href="">Our Services</a> <a
-						class="btn btn-link" href="">Terms & Condition</a> <a
-						class="btn btn-link" href="">Support</a>
+					<a class="btn btn-link" href="home.jsp">Home</a> <a
+						class="btn btn-link" href="login.jsp">Login</a> 
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h4 class="text-white mb-4">Business Hours</h4>
@@ -345,16 +227,7 @@
 					<p class="mb-1">Sunday</p>
 					<h6 class="text-light">Closed</h6>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h4 class="text-white mb-4">Newsletter</h4>
-					<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-					<div class="position-relative w-100">
-						<input class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-							type="text" placeholder="Your email">
-						<button type="button"
-							class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -366,15 +239,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-					&copy; <a class="fw-medium text-light" href="#">Your Site Name</a>,
+					&copy; <a class="fw-medium text-light" href="#">Employee Management</a>,
 					All Right Reserved.
 				</div>
-				<div class="col-md-6 text-center text-md-end">
-					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-					Designed By <a class="fw-medium text-light"
-						href="https://htmlcodex.com">HTML Codex</a> Distributed By <a
-						class="fw-medium text-light" href="https://themewagon.com">ThemeWagon</a>
-				</div>
+				
 			</div>
 		</div>
 	</div>
